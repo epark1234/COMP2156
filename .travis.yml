@@ -2,11 +2,11 @@ language: node_js
 dist: focal
 node_js:
   - "20.11.0"
-  before_install:
-  - npm install -g npm@latest
-"scripts": {
-  "test": "echo \"No tests to run.\" && exit 0"
-}
+before_install:
+  - npm config delete spin # Attempt to fix the 'spin' option error
+  - npm install -g npm@latest # Ensure using the latest npm
+script:
+  - npm test # Use npm to run your test script
 deploy:
   provider: pages
   skip_cleanup: true
