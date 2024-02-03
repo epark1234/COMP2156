@@ -8,3 +8,19 @@ deploy:
   local_dir: build
   on:
     branch: main
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Warning: No tests created yet.\"",
+    "start": "node index.js",
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+  
