@@ -3,8 +3,7 @@ dist: focal
 node_js:
   - "20.11.0"
 before_install:
-  - npm config delete spin # Attempt to fix the 'spin' option error
-  - npm install -g npm@latest # Ensure using the latest npm
+  - npm install -g npm@latest 
 script:
   - echo "Testing..." && exit 0
 deploy:
