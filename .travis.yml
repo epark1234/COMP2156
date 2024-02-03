@@ -6,7 +6,7 @@ before_install:
   - npm config delete spin # Attempt to fix the 'spin' option error
   - npm install -g npm@latest # Ensure using the latest npm
 script:
-   - echo "Testing..." && exit 0
+  - echo "Testing..." && exit 0
 deploy:
   provider: pages
   skip_cleanup: true
@@ -14,6 +14,3 @@ deploy:
   local_dir: build
   on:
     branch: main
-"scripts": {
-  "test": "echo \"Testing...\" && exit 0"
-}
