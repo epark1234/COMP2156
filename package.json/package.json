@@ -1,14 +1,11 @@
 {
   "name": "package.json",
   "version": "20.11.0",
-  "description": "",
-  "main": "index.js",
+  "description": "lab 4",
   "scripts": {
-    "test": "echo \"Warning: No tests created yet.\"",
-    "start": "node index.js",
-    "build": "node build.js"
+    "test": "echo \"Testing...\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    // Your project's dependencies
+  }
 }
