@@ -1,14 +1,9 @@
-{
-  "name": "package.json",
-  "version": "20.11.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Warning: No tests created yet.\"",
-    "start": "node index.js",
-    "build": "node build.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+"dependencies": {
+  "gh-pages": "^2.0.1",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-scripts": "5.0.1",
+  "web-vitals": "^2.1.4",
+  "travis": "^0.1.1",
+  "yarn": "^1.13.0"
 }
