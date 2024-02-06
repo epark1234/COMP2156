@@ -1,7 +1,7 @@
 {
   "name": "comp2156",
   "version": "1.0.0",
-  "description": "vi README.md ### COMP2156 - Developer Operations",
+  "description": "COMP2156 - Developer Operations",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -18,6 +18,3 @@
   "author": "",
   "license": "ISC"
 }
-
-
-
