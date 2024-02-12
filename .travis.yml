@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-  - "12" # Specifying a Node.js version known for broader compatibility
+  - "12" # Ensure this is not set to "stable"
 
-dist: bionic # Using Ubuntu Bionic, which has a more recent version of GLIBC
+dist: bionic # Confirm this is set to use the Bionic distribution
 
 branches:
   only:
@@ -17,13 +17,18 @@ install:
   - npm install -g yarn
 
 script:
-  #- yarn lint # This line is commented out; remove the comment to enable linting
+  #- yarn lint
   - yarn build
-  - mv build/index.html build/404.html # Ensures SPA routes properly handle 404 errors
+  - mv build/index.html build/404.html
 
 deploy:
   provider: pages
   skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
+  on:
+    branch: master
+
   github_token: $github_token
   local_dir: build
   on:
