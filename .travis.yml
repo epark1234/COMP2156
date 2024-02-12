@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "14" # Specifying a Node.js version known for broader compatibility
+  - "12" # Specifying a Node.js version known for broader compatibility
 
 dist: bionic # Using Ubuntu Bionic, which has a more recent version of GLIBC
 
