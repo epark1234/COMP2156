@@ -1,15 +1,27 @@
 language: node_js
-dist: focal
 node_js:
-  - "20.11.0"
-before_install:
-  - npm install -g npm@latest 
+  - "stable"
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+  - node_modules
+
+install:
+  - npm install
+  - npm install -g yarn
+
 script:
-  - echo "Testing..." && exit 0
+  #- yarn lint
+  - yarn build
+  - mv build/index.html build/404.html
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
   on:
-    branch: main
+    branch: master
