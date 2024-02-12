@@ -1,12 +1,7 @@
 language: node_js
+dist: bionic
 node_js:
-  - "12" # Ensure this is not set to "stable"
-
-dist: bionic # Confirm this is set to use the Bionic distribution
-
-before_install:
-  - nvm install 12
-  - nvm use 12
+  - "12"
 
 branches:
   only:
@@ -14,14 +9,17 @@ branches:
 
 cache:
   directories:
-  - node_modules
+    - node_modules
+
+before_install:
+  - nvm install 12
+  - nvm use 12
 
 install:
   - npm install
   - npm install -g yarn
 
 script:
-  #- yarn lint
   - yarn build
   - mv build/index.html build/404.html
 
@@ -32,6 +30,7 @@ deploy:
   local_dir: build
   on:
     branch: master
+
 
   github_token: $github_token
   local_dir: build
