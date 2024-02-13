@@ -1,7 +1,7 @@
 language: node_js
 dist: bionic
 node_js:
-  - "20.11.0"
+  - "16" # Use a supported LTS version of Node.js
 
 branches:
   only:
