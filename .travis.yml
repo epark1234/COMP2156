@@ -14,15 +14,3 @@ deploy:
   local_dir: build
   on:
     branch: main
-
-install:
-  - npm install
-  - npm install -g yarn
-cache:
-  directories:
-  - node_modules
-script:
-  #- yarn lint
-  - yarn build
-  - mv build/index.html build/404.html
-
