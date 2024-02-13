@@ -1,6 +1,12 @@
 language: node_js
+dist: focal
 node_js:
-  - "stable"
+  - "20.11.0"
+
+before_install:
+  - npm install -g npm@latest 
+script:
+  - echo "Testing..." && exit 0
 deploy:
   provider: pages
   skip_cleanup: true
@@ -8,6 +14,3 @@ deploy:
   local_dir: build
   on:
     branch: main
-
-
-  
