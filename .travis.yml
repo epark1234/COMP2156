@@ -2,8 +2,6 @@ language: node_js
 dist: bionic
 node_js:
   - "12"
-script:
-  - node --version
 
 branches:
   only:
@@ -22,19 +20,15 @@ install:
   - npm install -g yarn
 
 script:
+  - node --version
   - yarn build
   - mv build/index.html build/404.html
 
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $github_token
+  github_token: $GITHUB_TOKEN # Ensure this is correctly set up in your Travis CI environment variables
   local_dir: build
   on:
     branch: master
 
-
-  github_token: $github_token
-  local_dir: build
-  on:
-    branch: master
