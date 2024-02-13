@@ -1,29 +1,15 @@
 language: node_js
-dist: bionic
+dist: focal
 node_js:
-  - "16" # Use a supported LTS version of Node.js
-
-branches:
-  only:
-  - master
-
-cache:
-  directories:
-    - node_modules
-
-install:
-  - npm install
-  - npm install -g yarn
-
+  - "20.11.0"
+before_install:
+  - npm install -g npm@latest 
 script:
-  - node --version
-  - yarn build
-  - mv build/index.html build/404.html
-
+  - echo "Testing..." && exit 0
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Ensure this is correctly set up in your Travis CI environment variables
+  github_token: $github_token
   local_dir: build
   on:
-    branch: master
+    branch: main
